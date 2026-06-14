@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EE Solutions – 24/7 Security, CCTV & Alarm Systems | South Africa</title>
+  <meta name="description" content="EE Solutions provides professional CCTV installation, alarm systems, and security patrol services across South Africa — 24 hours a day, 7 days a week. Get a free quote today." />
+  <meta name="keywords" content="security company South Africa, CCTV installation Cape Town, alarm systems, security patrol, EE Solutions, surveillance" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-shield" viewBox="0 0 40 44" fill="none" width="40" height="44">
+        <path d="M20 3L3 10V22C3 32 10.5 41 20 44C29.5 41 37 32 37 22V10L20 3Z" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/>
+        <text x="20" y="28" text-anchor="middle" fill="#f5a623" font-family="Arial" font-size="13" font-weight="bold">EE</text>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-name">EE <span>Solutions</span></span>
+        <span class="logo-tagline">Security &amp; Surveillance</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog &amp; News</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html" class="nav-cta">Get a Free Quote</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> South Africa's Trusted Security Partner</div>
+      <h1>Your Security Is Our <span>Priority</span></h1>
+      <p>Professional CCTV installation, alarm systems, and security patrol — protecting homes and businesses across South Africa, 24 hours a day, 7 days a week.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-file-invoice"></i> Get a Free Quote
+        </a>
+        <a href="services.html" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-play-circle"></i> Our Services
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <i class="fa-solid fa-clock"></i>
+          <div class="hero-trust-text">
+            <strong>24/7 Response</strong>
+            <span>Always available</span>
+          </div>
+        </div>
+        <div class="hero-trust-item">
+          <i class="fa-solid fa-certificate"></i>
+          <div class="hero-trust-text">
+            <strong>Fully Licensed</strong>
+            <span>&amp; insured</span>
+          </div>
+        </div>
+        <div class="hero-trust-item">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <div class="hero-trust-text">
+            <strong>Nationwide</strong>
+            <span>Coverage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Quote Card -->
+    <div class="hero-card fade-in">
+      <h3>Request a Free Quote</h3>
+      <p>We'll get back to you within 2 hours.</p>
+      <form data-validate id="heroForm">
+        <div class="form-group">
+          <label>Full Name <span>*</span></label>
+          <input type="text" name="name" placeholder="e.g. John Dlamini" required />
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label>Phone Number <span>*</span></label>
+          <input type="tel" name="phone" placeholder="+27 XX XXX XXXX" required />
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label>Service Needed <span>*</span></label>
+          <select name="service" required>
+            <option value="">Select a service…</option>
+            <option>CCTV Installation</option>
+            <option>Alarm System</option>
+            <option>Security Patrol</option>
+            <option>24/7 Monitoring</option>
+            <option>Multiple Services</option>
+          </select>
+          <span class="form-error-msg"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg form-submit">
+          <i class="fa-solid fa-paper-plane"></i> Request Quote — It's Free
+        </button>
+      </form>
+      <div class="form-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>Quote Request Received!</h4>
+        <p>Thank you! Mr Tshuma will contact you within 2 hours to discuss your security needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <i class="fa-solid fa-users"></i>
+        <div class="trust-item-text">
+          <strong>500+</strong>
+          <span>Happy Clients</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div class="trust-item-text">
+          <strong>24/7</strong>
+          <span>Live Monitoring</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-star"></i>
+        <div class="trust-item-text">
+          <strong>4.9/5</strong>
+          <span>Client Rating</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <div class="trust-item-text">
+          <strong>Nationwide</strong>
+          <span>South Africa</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-certificate"></i>
+        <div class="trust-item-text">
+          <strong>Fully</strong>
+          <span>Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">What We Do</div>
+      <h2>Comprehensive Security Solutions</h2>
+      <div class="divider"></div>
+      <p>From high-definition CCTV cameras to smart alarm systems and armed response patrols — EE Solutions delivers end-to-end protection tailored to your property and budget.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in delay-1">
+        <div class="service-icon"><i class="fa-solid fa-video"></i></div>
+        <h3>CCTV &amp; Surveillance</h3>
+        <p>High-definition cameras with remote access, night vision, and cloud or local recording. Monitor your property in real time from anywhere.</p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> HD &amp; 4K camera options</li>
+          <li><i class="fa-solid fa-check"></i> Remote monitoring app</li>
+          <li><i class="fa-solid fa-check"></i> Night vision &amp; motion alerts</li>
+          <li><i class="fa-solid fa-check"></i> Professional installation</li>
+        </ul>
+        <a href="services.html#cctv" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card fade-in delay-2">
+        <div class="service-icon"><i class="fa-solid fa-bell"></i></div>
+        <h3>Alarm Systems</h3>
+        <p>Smart burglar alarm systems with immediate armed response dispatch. Connected to our 24/7 monitoring centre for instant action when it counts most.</p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> Armed response dispatch</li>
+          <li><i class="fa-solid fa-check"></i> Panic buttons &amp; sensors</li>
+          <li><i class="fa-solid fa-check"></i> Cellular &amp; WiFi backup</li>
+          <li><i class="fa-solid fa-check"></i> 24/7 monitoring centre</li>
+        </ul>
+        <a href="services.html#alarms" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card fade-in delay-3">
+        <div class="service-icon"><i class="fa-solid fa-person-military-rifle"></i></div>
+        <h3>Security Patrol</h3>
+        <p>Uniformed and armed security officers conduct regular patrols of your estate, business park, or event — visible deterrence that works.</p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> Uniformed officers</li>
+          <li><i class="fa-solid fa-check"></i> Estate &amp; complex patrols</li>
+          <li><i class="fa-solid fa-check"></i> Event security</li>
+          <li><i class="fa-solid fa-check"></i> GPS-tracked vehicles</li>
+        </ul>
+        <a href="services.html#patrol" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-visual fade-in">
+        <div class="why-image"></div>
+        <div class="why-stat-card">
+          <span class="stat-num">98%</span>
+          <span>Client Satisfaction</span>
+        </div>
+      </div>
+      <div class="fade-in delay-2">
+        <div class="section-label">Why EE Solutions</div>
+        <h2>Security You Can Trust, Service You'll Remember</h2>
+        <p style="margin-top: 12px;">We don't just install cameras — we build lasting partnerships with every client. Our team of certified security professionals is on call around the clock, because threats don't keep office hours.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h4>Rapid Response</h4>
+              <p>Our armed response units reach most locations within minutes. Every second matters in a security situation.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div>
+              <h4>Vetted &amp; Trained Professionals</h4>
+              <p>All officers are PSIRA-registered, background-checked, and undergo regular training to stay sharp.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <div>
+              <h4>Smart Technology</h4>
+              <p>Real-time alerts, remote camera access, and AI-powered motion detection give you complete situational awareness.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <h4>Transparent Pricing</h4>
+              <p>No hidden fees. We assess your needs, quote clearly, and stick to it. Your protection is our priority, not our profit margin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-in">
+        <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+        <span class="stat-label">Properties Protected</span>
+      </div>
+      <div class="stat-item fade-in delay-1">
+        <span class="stat-number" data-target="2400" data-suffix="">0</span>
+        <span class="stat-label">Hours Monitored / Month</span>
+      </div>
+      <div class="stat-item fade-in delay-2">
+        <span class="stat-number" data-target="98" data-suffix="%">0%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+      <div class="stat-item fade-in delay-3">
+        <span class="stat-number" data-target="24" data-suffix="/7">0/7</span>
+        <span class="stat-label">Emergency Response</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUOTE SECTION ===== -->
+<section class="quote-section" id="quote">
+  <div class="container">
+    <div class="quote-inner">
+      <div class="quote-info fade-in">
+        <div class="section-label">Contact Us</div>
+        <h2>Ready to Secure Your Property?</h2>
+        <p>Fill in the form and our team will prepare a personalised security solution for you — completely free of charge. No obligation.</p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-detail">
+              <strong>Call Us Anytime</strong>
+              <a href="tel:+447471642878">+44 7471 642878</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-detail">
+              <strong>Email</strong>
+              <a href="mailto:rgymag@gmail.com">rgymag@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-detail">
+              <strong>Visit Us</strong>
+              <span>1 Pluto Rd, Surrey Estate</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="contact-detail">
+              <strong>Main Contact</strong>
+              <span>Mr R Tshuma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-in delay-2">
+        <div class="form-card">
+          <h3>Request Your Free Security Quote</h3>
+          <p>All enquiries are handled within 2 hours.</p>
+          <form data-validate id="mainQuoteForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name <span>*</span></label>
+                <input type="text" name="fname" placeholder="First name" required />
+                <span class="form-error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label>Last Name <span>*</span></label>
+                <input type="text" name="lname" placeholder="Last name" required />
+                <span class="form-error-msg"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone <span>*</span></label>
+                <input type="tel" name="phone" placeholder="+27 XX XXX XXXX" required />
+                <span class="form-error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label>Email <span>*</span></label>
+                <input type="email" name="email" placeholder="you@example.com" required />
+                <span class="form-error-msg"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Property Type <span>*</span></label>
+              <select name="property" required>
+                <option value="">Select property type…</option>
+                <option>Residential Home</option>
+                <option>Business / Office</option>
+                <option>Retail Store</option>
+                <option>Estate / Complex</option>
+                <option>Industrial / Warehouse</option>
+                <option>Other</option>
+              </select>
+              <span class="form-error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label>Services Required</label>
+              <select name="service">
+                <option value="">Select service(s)…</option>
+                <option>CCTV Installation</option>
+                <option>Alarm System</option>
+                <option>Security Patrol</option>
+                <option>24/7 Monitoring</option>
+                <option>All of the above</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tell Us More</label>
+              <textarea name="message" placeholder="Property address, number of cameras needed, specific concerns…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg form-submit">
+              <i class="fa-solid fa-paper-plane"></i> Send My Quote Request
+            </button>
+          </form>
+          <div class="form-success">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4>Quote Request Received!</h4>
+            <p>Thank you! Mr Tshuma will call or email you within 2 hours with your free, personalised security quote.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Client Reviews</div>
+      <h2>What Our Clients Say</h2>
+      <div class="divider"></div>
+      <p>We let our clients do the talking. Real reviews from real South Africans who trust EE Solutions with what matters most.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in delay-1">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"EE Solutions installed CCTV cameras at both our home and business. The team was professional, punctual, and the cameras are crystal clear. The remote monitoring app is a game-changer — I can check in from anywhere."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><span>TM</span></div>
+          <div>
+            <span class="author-name">Thabo Mokoena</span>
+            <span class="author-location">Johannesburg, Gauteng</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in delay-2">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"After being burgled twice, I contacted EE Solutions. Best decision I've made. They installed a full alarm system with panic buttons, and when it triggered two weeks later, armed response arrived in under 7 minutes. Incredible service."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><span>PN</span></div>
+          <div>
+            <span class="author-name">Priya Naidoo</span>
+            <span class="author-location">Durban, KwaZulu-Natal</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in delay-3">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"We hired EE Solutions for our retail chain's security patrol across three branches. The guards are disciplined, professional, and have helped deter shoplifting significantly. Mr Tshuma is always reachable. Highly recommended."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><span>JB</span></div>
+          <div>
+            <span class="author-name">James Botha</span>
+            <span class="author-location">Cape Town, Western Cape</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 40px;" class="fade-in">
+      <a href="testimonials.html" class="btn btn-navy">Read All Reviews <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG PREVIEW ===== -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Blog &amp; Tips</div>
+      <h2>Security Advice &amp; News</h2>
+      <div class="divider"></div>
+      <p>Stay informed with the latest security tips, industry news, and expert advice from the EE Solutions team.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card fade-in delay-1">
+        <div class="blog-image">
+          <div class="gallery-placeholder"><i class="fa-solid fa-video"></i><span>CCTV Tips</span></div>
+          <span class="blog-cat">CCTV</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> 10 Jun 2025</span>
+            <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+          </div>
+          <h4>5 Places You Must Install CCTV Cameras at Home</h4>
+          <p>Most break-ins happen at the same entry points. Here's where strategic camera placement can deter criminals before they strike.</p>
+          <a href="blog.html" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="blog-card fade-in delay-2">
+        <div class="blog-image">
+          <div class="gallery-placeholder"><i class="fa-solid fa-bell"></i><span>Alarm Systems</span></div>
+          <span class="blog-cat">Alarms</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> 3 Jun 2025</span>
+            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+          </div>
+          <h4>Why Smart Alarms Are Replacing Traditional Systems in SA</h4>
+          <p>Technology has transformed burglar alarms. Modern smart systems offer remote control, false-alarm filters, and instant notification to your phone.</p>
+          <a href="blog.html" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="blog-card fade-in delay-3">
+        <div class="blog-image">
+          <div class="gallery-placeholder"><i class="fa-solid fa-house-lock"></i><span>Home Security</span></div>
+          <span class="blog-cat">Safety Tips</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> 28 May 2025</span>
+            <span><i class="fa-regular fa-clock"></i> 3 min read</span>
+          </div>
+          <h4>10 Simple Things That Make Your Home a Harder Target</h4>
+          <p>Criminals look for easy opportunities. These low-cost, high-impact measures can dramatically reduce your risk of becoming a victim.</p>
+          <a href="blog.html" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center; margin-top: 40px;" class="fade-in">
+      <a href="blog.html" class="btn btn-navy">View All Articles <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content fade-in">
+      <div class="section-label" style="background:rgba(255,255,255,0.1); color:var(--gold);">Take Action Today</div>
+      <h2 style="color:var(--white);">Don't Wait Until It's Too Late</h2>
+      <p>Get a free security assessment and quote from EE Solutions — no pressure, no obligation. Mr Tshuma and his team are ready to help.</p>
+      <div class="cta-banner-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-file-invoice"></i> Get My Free Quote
+        </a>
+        <a href="tel:+447471642878" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-phone"></i> Call +44 7471 642878
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EMERGENCY BANNER ===== -->
+<div class="emergency-banner">
+  <p><i class="fa-solid fa-phone-volume"></i> 24/7 Emergency Response — Call Now: <a href="tel:+447471642878">+44 7471 642878</a> &nbsp;|&nbsp; Email: <a href="mailto:rgymag@gmail.com">rgymag@gmail.com</a></p>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 40 44" fill="none" width="34" height="38">
+            <path d="M20 3L3 10V22C3 32 10.5 41 20 44C29.5 41 37 32 37 22V10L20 3Z" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/>
+            <text x="20" y="28" text-anchor="middle" fill="#f5a623" font-family="Arial" font-size="13" font-weight="bold">EE</text>
+          </svg>
+          <div class="logo-text">
+            <span class="logo-name">EE <span>Solutions</span></span>
+            <span class="logo-tagline">Security &amp; Surveillance</span>
+          </div>
+        </a>
+        <p>South Africa's trusted security partner. Providing 24/7 CCTV monitoring, alarm systems, and security patrol services to homes and businesses across the country.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i>Services</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i>Gallery</a></li>
+          <li><a href="testimonials.html"><i class="fa-solid fa-chevron-right"></i>Testimonials</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i>Blog &amp; News</a></li>
+          <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i>Careers</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="services.html#cctv"><i class="fa-solid fa-chevron-right"></i>CCTV Installation</a></li>
+          <li><a href="services.html#cctv"><i class="fa-solid fa-chevron-right"></i>24/7 Monitoring</a></li>
+          <li><a href="services.html#alarms"><i class="fa-solid fa-chevron-right"></i>Alarm Systems</a></li>
+          <li><a href="services.html#alarms"><i class="fa-solid fa-chevron-right"></i>Panic Buttons</a></li>
+          <li><a href="services.html#patrol"><i class="fa-solid fa-chevron-right"></i>Security Patrol</a></li>
+          <li><a href="services.html#patrol"><i class="fa-solid fa-chevron-right"></i>Event Security</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Request a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>1 Pluto Rd, Surrey Estate, Cape Town, South Africa</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+447471642878">+44 7471 642878</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:rgymag@gmail.com">rgymag@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Open 24 Hours / 7 Days a Week</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Contact: Mr R Tshuma</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 EE Solutions (Pty) Ltd. All rights reserved. Serving South Africa.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">POPIA Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CHAT WIDGET ===== -->
+<div class="chat-widget">
+  <div class="chat-panel">
+    <div class="chat-header">
+      <div class="chat-avatar"><i class="fa-solid fa-headset"></i></div>
+      <div class="chat-header-info">
+        <h5>EE Solutions Support</h5>
+        <span><span class="online-dot"></span> Typically replies within 1 hour</span>
+      </div>
+      <button class="chat-close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-messages">
+      <div class="chat-message">👋 Hello! How can we help you today? Whether it's a quote, an emergency, or a general query — we're here 24/7.</div>
+    </div>
+    <div class="chat-body">
+      <div class="form-group">
+        <input type="text" name="chat-name" placeholder="Your name" />
+      </div>
+      <div class="form-group">
+        <textarea name="chat-msg" placeholder="Type your message…"></textarea>
+      </div>
+      <button class="chat-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </div>
+  </div>
+  <button class="chat-toggle" aria-label="Open live chat">
+    <span class="chat-badge">1</span>
+    <i class="fa-solid fa-comments"></i>
+  </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

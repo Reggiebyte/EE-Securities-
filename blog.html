@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog &amp; Security News | EE Solutions South Africa</title>
+  <meta name="description" content="Security tips, industry news, and expert advice from the EE Solutions team — keeping South Africans informed and protected." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .blog-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; }
+    .sidebar { position: sticky; top: 96px; }
+    .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+    .sidebar-card h4 { margin-bottom: 18px; font-size: 1rem; padding-bottom: 12px; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .sidebar-cat { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--text-mid); transition: var(--transition); cursor: pointer; }
+    .sidebar-cat:hover { color: var(--gold); padding-left: 4px; }
+    .sidebar-cat:last-child { border-bottom: none; }
+    .cat-count { background: var(--off-white); color: var(--text-gray); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+    .recent-post { display: flex; gap: 12px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .recent-post:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .recent-post-thumb { width: 56px; height: 56px; border-radius: 8px; background: var(--navy); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .recent-post-thumb i { color: var(--gold); font-size: 1.2rem; }
+    .recent-post-info h6 { font-size: 0.82rem; font-family: var(--font-head); color: var(--navy); margin-bottom: 4px; line-height: 1.3; }
+    .recent-post-info span { font-size: 0.72rem; color: var(--text-gray); }
+    .blog-grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .featured-post { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); background: var(--white); }
+    .featured-post-image { background: var(--navy); min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+    .featured-post-image i { font-size: 3.5rem; color: var(--gold); opacity: 0.7; }
+    .featured-post-image span { color: rgba(255,255,255,0.5); font-size: 0.85rem; font-family: var(--font-head); }
+    .featured-post-body { padding: 36px; display: flex; flex-direction: column; justify-content: center; }
+    .featured-label { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .featured-post-body h3 { margin-bottom: 14px; font-size: 1.4rem; }
+    .featured-post-body p { font-size: 0.92rem; margin-bottom: 24px; }
+    .newsletter-form { display: flex; gap: 8px; }
+    .newsletter-form input { flex: 1; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 0.85rem; outline: none; background: var(--off-white); }
+    .newsletter-form input:focus { border-color: var(--gold); }
+    .newsletter-form button { padding: 10px 16px; background: var(--navy); color: var(--white); border: none; border-radius: var(--radius); font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: var(--transition); white-space: nowrap; }
+    .newsletter-form button:hover { background: var(--gold); color: var(--navy-dark); }
+    @media (max-width: 900px) {
+      .blog-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .featured-post { grid-template-columns: 1fr; }
+      .blog-grid-main { grid-template-columns: 1fr; }
+      .featured-post { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 40 44" fill="none" width="40" height="44">
+        <path d="M20 3L3 10V22C3 32 10.5 41 20 44C29.5 41 37 32 37 22V10L20 3Z" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/>
+        <text x="20" y="28" text-anchor="middle" fill="#f5a623" font-family="Arial" font-size="13" font-weight="bold">EE</text>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-name">EE <span>Solutions</span></span>
+        <span class="logo-tagline">Security &amp; Surveillance</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog &amp; News</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html" class="nav-cta">Get a Free Quote</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-pattern"></div>
+  <div class="container page-hero-content">
+    <div class="hero-badge"><i class="fa-solid fa-newspaper"></i> Expert Advice</div>
+    <h1>Blog &amp; Security News</h1>
+    <p>Stay ahead of crime with tips, news, and expert insights from the EE Solutions security team.</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Blog</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="blog-layout">
+      <!-- MAIN CONTENT -->
+      <main>
+        <div class="blog-grid-main">
+          <!-- FEATURED POST -->
+          <div class="featured-post fade-in">
+            <div class="featured-post-image">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Security Guide</span>
+            </div>
+            <div class="featured-post-body">
+              <div class="featured-label"><i class="fa-solid fa-fire" style="color: var(--gold); margin-right:4px;"></i> Featured Post</div>
+              <div class="blog-meta" style="margin-bottom: 8px;"><span><i class="fa-regular fa-calendar"></i> 10 Jun 2025</span><span><i class="fa-regular fa-clock"></i> 7 min read</span></div>
+              <h3>The Complete Home Security Guide for South African Homeowners in 2025</h3>
+              <p>From choosing the right cameras to picking an alarm that works during load-shedding — everything you need to know to protect your home this year.</p>
+              <a href="#" class="btn btn-navy btn-sm">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- BLOG CARDS -->
+          <article class="blog-card fade-in delay-1">
+            <div class="blog-image">
+              <div class="gallery-placeholder"><i class="fa-solid fa-video"></i><span>CCTV Tips</span></div>
+              <span class="blog-cat">CCTV</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 3 Jun 2025</span><span><i class="fa-regular fa-clock"></i> 4 min</span></div>
+              <h4>5 Places You Must Install CCTV Cameras at Home</h4>
+              <p>Most break-ins happen at the same entry points. Strategic placement deters criminals before they strike.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card fade-in delay-2">
+            <div class="blog-image">
+              <div class="gallery-placeholder"><i class="fa-solid fa-bell"></i><span>Alarm Systems</span></div>
+              <span class="blog-cat">Alarms</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 28 May 2025</span><span><i class="fa-regular fa-clock"></i> 5 min</span></div>
+              <h4>Why Smart Alarms Are Replacing Traditional Systems in SA</h4>
+              <p>Remote control, false-alarm filters, and instant phone alerts — here's why the upgrade is worth it.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card fade-in delay-1">
+            <div class="blog-image">
+              <div class="gallery-placeholder"><i class="fa-solid fa-house-lock"></i><span>Home Safety</span></div>
+              <span class="blog-cat">Safety Tips</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 20 May 2025</span><span><i class="fa-regular fa-clock"></i> 3 min</span></div>
+              <h4>10 Simple Things That Make Your Home a Harder Target</h4>
+              <p>Criminals look for easy opportunities. These low-cost measures dramatically reduce your risk.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card fade-in delay-2">
+            <div class="blog-image">
+              <div class="gallery-placeholder"><i class="fa-solid fa-store"></i><span>Business Security</span></div>
+              <span class="blog-cat">Business</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 12 May 2025</span><span><i class="fa-regular fa-clock"></i> 6 min</span></div>
+              <h4>How to Protect Your Retail Store from Shoplifting and Theft</h4>
+              <p>Retail crime costs South African businesses billions annually. Here's the security setup that works.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card fade-in delay-1">
+            <div class="blog-image">
+              <div class="gallery-placeholder"><i class="fa-solid fa-bolt"></i><span>Load Shedding</span></div>
+              <span class="blog-cat">Load Shedding</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 5 May 2025</span><span><i class="fa-regular fa-clock"></i> 4 min</span></div>
+              <h4>Does Load Shedding Leave Your Security System Vulnerable?</h4>
+              <p>The honest answer — and what to do to ensure your alarms and cameras keep working when the power goes out.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card fade-in delay-2">
+            <div class="blog-image">
+              <div class="gallery-placeholder"><i class="fa-solid fa-person-military-rifle"></i><span>Patrol Tips</span></div>
+              <span class="blog-cat">Patrol</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 28 Apr 2025</span><span><i class="fa-regular fa-clock"></i> 5 min</span></div>
+              <h4>Do You Really Need Security Patrols? The Data Says Yes</h4>
+              <p>We analysed crime patterns across Cape Town estates and the results are clear — visible patrols work.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar fade-in delay-2">
+        <!-- Newsletter -->
+        <div class="sidebar-card">
+          <h4>Security Tips Newsletter</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 16px;">Get monthly security advice and news straight to your inbox. No spam.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="your@email.com" />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-card">
+          <h4>Categories</h4>
+          <div class="sidebar-cat">CCTV <span class="cat-count">8</span></div>
+          <div class="sidebar-cat">Alarm Systems <span class="cat-count">6</span></div>
+          <div class="sidebar-cat">Safety Tips <span class="cat-count">12</span></div>
+          <div class="sidebar-cat">Business Security <span class="cat-count">5</span></div>
+          <div class="sidebar-cat">Load Shedding <span class="cat-count">3</span></div>
+          <div class="sidebar-cat">Security Patrol <span class="cat-count">4</span></div>
+          <div class="sidebar-cat">News &amp; Updates <span class="cat-count">7</span></div>
+        </div>
+
+        <!-- Recent Posts -->
+        <div class="sidebar-card">
+          <h4>Recent Posts</h4>
+          <div class="recent-post">
+            <div class="recent-post-thumb"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="recent-post-info">
+              <h6>Complete Home Security Guide 2025</h6>
+              <span><i class="fa-regular fa-calendar"></i> 10 Jun 2025</span>
+            </div>
+          </div>
+          <div class="recent-post">
+            <div class="recent-post-thumb"><i class="fa-solid fa-video"></i></div>
+            <div class="recent-post-info">
+              <h6>5 Places to Install CCTV at Home</h6>
+              <span><i class="fa-regular fa-calendar"></i> 3 Jun 2025</span>
+            </div>
+          </div>
+          <div class="recent-post">
+            <div class="recent-post-thumb"><i class="fa-solid fa-bell"></i></div>
+            <div class="recent-post-info">
+              <h6>Smart Alarms vs Traditional Systems</h6>
+              <span><i class="fa-regular fa-calendar"></i> 28 May 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Contact -->
+        <div class="sidebar-card" style="background: var(--navy); border-color: var(--navy);">
+          <h4 style="color: var(--gold);">Need Help Now?</h4>
+          <p style="color: rgba(255,255,255,0.65); font-size: 0.85rem; margin-bottom: 16px;">Have a security question or want a free quote? Reach us anytime.</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom: 10px;"><i class="fa-solid fa-file-invoice"></i> Get a Free Quote</a>
+          <a href="tel:+447471642878" class="btn btn-outline" style="width:100%; justify-content:center;"><i class="fa-solid fa-phone"></i> +44 7471 642878</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content fade-in">
+      <h2 style="color:var(--white);">Ready to Upgrade Your Security?</h2>
+      <p>Knowledge is the first step — action is next. Contact EE Solutions today for a free security assessment.</p>
+      <div class="cta-banner-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-file-invoice"></i> Get My Free Quote</a>
+        <a href="tel:+447471642878" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> +44 7471 642878</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="emergency-banner">
+  <p><i class="fa-solid fa-phone-volume"></i> 24/7 Emergency Response — Call Now: <a href="tel:+447471642878">+44 7471 642878</a></p>
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 40 44" fill="none" width="34" height="38"><path d="M20 3L3 10V22C3 32 10.5 41 20 44C29.5 41 37 32 37 22V10L20 3Z" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/><text x="20" y="28" text-anchor="middle" fill="#f5a623" font-family="Arial" font-size="13" font-weight="bold">EE</text></svg>
+          <div class="logo-text"><span class="logo-name">EE <span>Solutions</span></span><span class="logo-tagline">Security &amp; Surveillance</span></div>
+        </a>
+        <p>South Africa's trusted security partner — 24/7 CCTV, alarms, and patrol.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i>Services</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i>Blog</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="services.html#cctv"><i class="fa-solid fa-chevron-right"></i>CCTV Installation</a></li>
+          <li><a href="services.html#alarms"><i class="fa-solid fa-chevron-right"></i>Alarm Systems</a></li>
+          <li><a href="services.html#patrol"><i class="fa-solid fa-chevron-right"></i>Security Patrol</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+447471642878">+44 7471 642878</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:rgymag@gmail.com">rgymag@gmail.com</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-clock"></i><span>24/7 Available</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 EE Solutions (Pty) Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+<div class="chat-widget">
+  <div class="chat-panel">
+    <div class="chat-header">
+      <div class="chat-avatar"><i class="fa-solid fa-headset"></i></div>
+      <div class="chat-header-info"><h5>EE Solutions Support</h5><span><span class="online-dot"></span> Typically replies within 1 hour</span></div>
+      <button class="chat-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-messages"><div class="chat-message">👋 Got a security question after reading our blog? Ask us — we're here 24/7!</div></div>
+    <div class="chat-body">
+      <div class="form-group"><input type="text" name="chat-name" placeholder="Your name" /></div>
+      <div class="form-group"><textarea name="chat-msg" placeholder="Type your message…"></textarea></div>
+      <button class="chat-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </div>
+  </div>
+  <button class="chat-toggle"><span class="chat-badge">1</span><i class="fa-solid fa-comments"></i></button>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

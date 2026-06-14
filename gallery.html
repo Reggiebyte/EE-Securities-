@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Fleet, Team &amp; Equipment | EE Solutions</title>
+  <meta name="description" content="View the EE Solutions gallery — our vehicles, security team, CCTV equipment, and alarm installations across South Africa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .gallery-placeholder { min-height: 160px; }
+    .gallery-item { min-height: 160px; }
+    .gallery-placeholder-v { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%); }
+    .gallery-placeholder-t { background: linear-gradient(135deg, #1a3a6e 0%, #0d2251 100%); }
+    .gallery-placeholder-e { background: linear-gradient(135deg, #0a1628 0%, #1a3a6e 100%); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 40 44" fill="none" width="40" height="44">
+        <path d="M20 3L3 10V22C3 32 10.5 41 20 44C29.5 41 37 32 37 22V10L20 3Z" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/>
+        <text x="20" y="28" text-anchor="middle" fill="#f5a623" font-family="Arial" font-size="13" font-weight="bold">EE</text>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-name">EE <span>Solutions</span></span>
+        <span class="logo-tagline">Security &amp; Surveillance</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog &amp; News</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html" class="nav-cta">Get a Free Quote</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-pattern"></div>
+  <div class="container page-hero-content">
+    <div class="hero-badge"><i class="fa-solid fa-images"></i> Photo Gallery</div>
+    <h1>Our Fleet, Team &amp; Equipment</h1>
+    <p>A look at the vehicles, people, and technology we deploy every day to keep South Africa safe.</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Gallery</span>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Gallery</div>
+      <h2>See EE Solutions in Action</h2>
+      <div class="divider"></div>
+      <p>Browse our fleet of response vehicles, our uniformed team, and the professional equipment we install at properties across South Africa.</p>
+    </div>
+
+    <div class="gallery-filters fade-in">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="vehicles">Response Vehicles</button>
+      <button class="filter-btn" data-filter="team">Our Team</button>
+      <button class="filter-btn" data-filter="equipment">Equipment</button>
+      <button class="filter-btn" data-filter="installations">Installations</button>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Vehicles -->
+      <div class="gallery-item wide fade-in" data-cat="vehicles">
+        <div class="gallery-placeholder gallery-placeholder-v">
+          <i class="fa-solid fa-car-side"></i>
+          <span>EE Solutions Response Fleet</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Armed Response Vehicles — GPS Tracked 24/7</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="vehicles">
+        <div class="gallery-placeholder gallery-placeholder-v">
+          <i class="fa-solid fa-truck-pickup"></i>
+          <span>Patrol Vehicle</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Patrol Unit — Surrey Estate</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="vehicles">
+        <div class="gallery-placeholder gallery-placeholder-v">
+          <i class="fa-solid fa-car-burst"></i>
+          <span>Response Unit</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Rapid Response Unit</span></div>
+      </div>
+
+      <!-- Team -->
+      <div class="gallery-item fade-in" data-cat="team">
+        <div class="gallery-placeholder gallery-placeholder-t">
+          <i class="fa-solid fa-user-shield"></i>
+          <span>Security Officer</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Uniformed Security Officer — PSIRA Registered</span></div>
+      </div>
+      <div class="gallery-item wide fade-in" data-cat="team">
+        <div class="gallery-placeholder gallery-placeholder-t">
+          <i class="fa-solid fa-users"></i>
+          <span>The EE Solutions Team</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">EE Solutions — Full Team Briefing</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="team">
+        <div class="gallery-placeholder gallery-placeholder-t">
+          <i class="fa-solid fa-person-military-rifle"></i>
+          <span>Armed Guard</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Armed Security Officer on Duty</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="team">
+        <div class="gallery-placeholder gallery-placeholder-t">
+          <i class="fa-solid fa-headset"></i>
+          <span>Control Room</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">24/7 Control Room — Live Monitoring</span></div>
+      </div>
+
+      <!-- Equipment -->
+      <div class="gallery-item fade-in" data-cat="equipment">
+        <div class="gallery-placeholder gallery-placeholder-e">
+          <i class="fa-solid fa-video"></i>
+          <span>HD CCTV Camera</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">4K Turret Camera — Weatherproof</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="equipment">
+        <div class="gallery-placeholder gallery-placeholder-e">
+          <i class="fa-solid fa-tower-broadcast"></i>
+          <span>PTZ Camera</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Pan-Tilt-Zoom Camera — 360° Coverage</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="equipment">
+        <div class="gallery-placeholder gallery-placeholder-e">
+          <i class="fa-solid fa-bell"></i>
+          <span>Alarm Panel</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Smart Alarm Control Panel</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="equipment">
+        <div class="gallery-placeholder gallery-placeholder-e">
+          <i class="fa-solid fa-server"></i>
+          <span>NVR / DVR</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Network Video Recorder — Local Storage</span></div>
+      </div>
+
+      <!-- Installations -->
+      <div class="gallery-item wide fade-in" data-cat="installations">
+        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0d2251 0%, #f5a623 100%); opacity: 0.9;">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <span>Residential CCTV Installation</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Completed CCTV Installation — Residential Property, Cape Town</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="installations">
+        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0d2251 0%, #d4891a 100%);">
+          <i class="fa-solid fa-building"></i>
+          <span>Commercial Install</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Commercial CCTV — Office Block, Johannesburg</span></div>
+      </div>
+      <div class="gallery-item fade-in" data-cat="installations">
+        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a3a6e 0%, #f5a623 100%);">
+          <i class="fa-solid fa-warehouse"></i>
+          <span>Industrial Site</span>
+        </div>
+        <div class="gallery-overlay"><span class="gallery-caption">Alarm &amp; CCTV — Industrial Warehouse, Durban</span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px; background: var(--off-white); padding: 30px; border-radius: var(--radius-lg); border: 1px dashed var(--border);">
+      <i class="fa-solid fa-camera" style="font-size: 2rem; color: var(--gold); margin-bottom: 12px; display:block;"></i>
+      <h4 style="margin-bottom: 8px;">More Photos Coming Soon</h4>
+      <p style="font-size: 0.9rem; max-width: 480px; margin: 0 auto;">We're constantly updating our gallery with new installations, fleet, and team photos. Check back soon — or <a href="contact.html" style="color: var(--gold); font-weight: 600;">contact us</a> to see more.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content fade-in">
+      <h2 style="color:var(--white);">Like What You See?</h2>
+      <p>Our professional team and equipment can be protecting your property within days. Get in touch today.</p>
+      <div class="cta-banner-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-file-invoice"></i> Get My Free Quote</a>
+        <a href="tel:+447471642878" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> +44 7471 642878</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="emergency-banner">
+  <p><i class="fa-solid fa-phone-volume"></i> 24/7 Emergency Response — Call Now: <a href="tel:+447471642878">+44 7471 642878</a></p>
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 40 44" fill="none" width="34" height="38"><path d="M20 3L3 10V22C3 32 10.5 41 20 44C29.5 41 37 32 37 22V10L20 3Z" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/><text x="20" y="28" text-anchor="middle" fill="#f5a623" font-family="Arial" font-size="13" font-weight="bold">EE</text></svg>
+          <div class="logo-text"><span class="logo-name">EE <span>Solutions</span></span><span class="logo-tagline">Security &amp; Surveillance</span></div>
+        </a>
+        <p>South Africa's trusted security partner — 24/7 CCTV, alarms, and patrol.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i>Services</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i>Gallery</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="services.html#cctv"><i class="fa-solid fa-chevron-right"></i>CCTV Installation</a></li>
+          <li><a href="services.html#alarms"><i class="fa-solid fa-chevron-right"></i>Alarm Systems</a></li>
+          <li><a href="services.html#patrol"><i class="fa-solid fa-chevron-right"></i>Security Patrol</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+447471642878">+44 7471 642878</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:rgymag@gmail.com">rgymag@gmail.com</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-clock"></i><span>24/7 Available</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 EE Solutions (Pty) Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+<div class="chat-widget">
+  <div class="chat-panel">
+    <div class="chat-header">
+      <div class="chat-avatar"><i class="fa-solid fa-headset"></i></div>
+      <div class="chat-header-info"><h5>EE Solutions Support</h5><span><span class="online-dot"></span> Typically replies within 1 hour</span></div>
+      <button class="chat-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-messages"><div class="chat-message">👋 Hello! Got a question about our services? We're here 24/7.</div></div>
+    <div class="chat-body">
+      <div class="form-group"><input type="text" name="chat-name" placeholder="Your name" /></div>
+      <div class="form-group"><textarea name="chat-msg" placeholder="Type your message…"></textarea></div>
+      <button class="chat-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </div>
+  </div>
+  <button class="chat-toggle"><span class="chat-badge">1</span><i class="fa-solid fa-comments"></i></button>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
