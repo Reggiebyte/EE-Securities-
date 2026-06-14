@@ -4,6 +4,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------- Scroll to top button (created first so scroll handlers can use it) ---------- */
+  const scrollTopBtn = document.createElement('button');
+  scrollTopBtn.className = 'scroll-top';
+  scrollTopBtn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+  scrollTopBtn.setAttribute('aria-label', 'Back to top');
+  scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  document.body.appendChild(scrollTopBtn);
+
   /* ---------- Navbar: sticky + hamburger ---------- */
   const navbar    = document.querySelector('.navbar');
   const hamburger = document.querySelector('.hamburger');
@@ -43,25 +51,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ---------- Scroll to top button ---------- */
-  const scrollTopBtn = document.createElement('button');
-  scrollTopBtn.className = 'scroll-top';
-  scrollTopBtn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
-  scrollTopBtn.setAttribute('aria-label', 'Back to top');
-  scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  document.body.appendChild(scrollTopBtn);
-
   /* ---------- Fade-in on scroll ---------- */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  const fadeEls = document.querySelectorAll('.fade-in');
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+  } else {
+    // Fallback: if observers aren't supported, just show everything
+    fadeEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // Safety net: never leave content permanently hidden
+  window.setTimeout(() => {
+    fadeEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('visible');
+    });
+  }, 1500);
 
   /* ---------- Counter animation ---------- */
   const counterObserver = new IntersectionObserver((entries) => {
