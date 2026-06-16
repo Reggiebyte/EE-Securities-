@@ -18,33 +18,27 @@
     .sidebar-cat { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--text-mid); transition: var(--transition); cursor: pointer; }
     .sidebar-cat:hover { color: var(--gold); padding-left: 4px; }
     .sidebar-cat:last-child { border-bottom: none; }
-    .cat-count { background: var(--off-white); color: var(--text-gray); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
-    .recent-post { display: flex; gap: 12px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
-    .recent-post:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .recent-post-thumb { width: 56px; height: 56px; border-radius: 8px; background: var(--navy); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-    .recent-post-thumb i { color: var(--gold); font-size: 1.2rem; }
-    .recent-post-info h6 { font-size: 0.82rem; font-family: var(--font-head); color: var(--navy); margin-bottom: 4px; line-height: 1.3; }
-    .recent-post-info span { font-size: 0.72rem; color: var(--text-gray); }
-    .blog-grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .featured-post { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); background: var(--white); }
-    .featured-post-image { background: var(--navy); min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
-    .featured-post-image i { font-size: 3.5rem; color: var(--gold); opacity: 0.7; }
-    .featured-post-image span { color: rgba(255,255,255,0.5); font-size: 0.85rem; font-family: var(--font-head); }
-    .featured-post-body { padding: 36px; display: flex; flex-direction: column; justify-content: center; }
-    .featured-label { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-    .featured-post-body h3 { margin-bottom: 14px; font-size: 1.4rem; }
-    .featured-post-body p { font-size: 0.92rem; margin-bottom: 24px; }
     .newsletter-form { display: flex; gap: 8px; }
     .newsletter-form input { flex: 1; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 0.85rem; outline: none; background: var(--off-white); }
     .newsletter-form input:focus { border-color: var(--gold); }
     .newsletter-form button { padding: 10px 16px; background: var(--navy); color: var(--white); border: none; border-radius: var(--radius); font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: var(--transition); white-space: nowrap; }
     .newsletter-form button:hover { background: var(--gold); color: var(--navy-dark); }
+    .blog-article { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; margin-bottom: 32px; box-shadow: var(--shadow-sm); }
+    .blog-article-cat { display: inline-block; background: var(--gold); color: var(--navy-dark); font-family: var(--font-head); font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+    .blog-article h2 { font-size: 1.4rem; margin-bottom: 10px; line-height: 1.35; }
+    .blog-article .blog-meta { margin-bottom: 24px; }
+    .blog-article h3 { font-size: 1.05rem; margin: 28px 0 10px; color: var(--navy); }
+    .blog-article p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 14px; color: var(--text-mid); }
+    .blog-article ul { margin: 10px 0 18px 20px; }
+    .blog-article ul li { font-size: 0.92rem; line-height: 1.75; color: var(--text-mid); margin-bottom: 6px; }
+    .blog-article ul li strong { color: var(--navy); }
+    .blog-article-cta { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-top: 28px; }
+    .blog-article-cta p { margin: 0; font-size: 0.9rem; }
+    .blog-article-cta a { color: var(--navy); font-weight: 700; }
     @media (max-width: 900px) {
       .blog-layout { grid-template-columns: 1fr; }
       .sidebar { position: static; }
-      .featured-post { grid-template-columns: 1fr; }
-      .blog-grid-main { grid-template-columns: 1fr; }
-      .featured-post { grid-column: span 1; }
+      .blog-article { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -53,7 +47,7 @@
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a href="index.html" class="logo">
-      <svg viewBox="0 0 44 44" fill="none" width="40" height="40"><circle cx="22" cy="22" r="21" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/><circle cx="22" cy="22" r="17.5" fill="none" stroke="#f5a623" stroke-width="0.7"/><path d="M10.5 13h3v18h-3zM13.5 13h11v2.8h-11zM13.5 20.6h9v2.8h-9zM13.5 28.2h11v2.8h-11z" fill="#f5a623"/><path d="M30.5 13h3v18h-3zM19.5 13h11v2.8h-11zM21.5 20.6h9v2.8h-9zM19.5 28.2h11v2.8h-11z" fill="#f5a623"/><circle cx="8" cy="22" r="0.9" fill="#f5a623"/><circle cx="36" cy="22" r="0.9" fill="#f5a623"/></svg>
+      <img src="images/logo.png" alt="EE Surveillance" width="40" height="40">
       <div class="logo-text">
         <span class="logo-name">EE <span>Solutions</span></span>
         <span class="logo-tagline">Protect What Matters</span>
@@ -64,7 +58,6 @@
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="gallery.html">Gallery</a>
-      <a href="testimonials.html">Testimonials</a>
       <a href="blog.html">Blog</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html" class="nav-cta">Get Free Quote</a>
@@ -77,7 +70,6 @@
   <a href="about.html">About Us</a>
   <a href="services.html">Services</a>
   <a href="gallery.html">Gallery</a>
-  <a href="testimonials.html">Testimonials</a>
   <a href="blog.html">Blog &amp; News</a>
   <a href="careers.html">Careers</a>
   <a href="contact.html" class="nav-cta">Get a Free Quote</a>
@@ -89,7 +81,7 @@
   <div class="page-hero-pattern"></div>
   <div class="container page-hero-content">
     <h1>Blog &amp; Security News</h1>
-    <p>Stay ahead of crime with tips, news, and expert insights from the EE Solutions security team.</p>
+    <p>Practical security advice from the EE Solutions team — tips you can act on today.</p>
     <div class="breadcrumb">
       <a href="index.html">Home</a>
       <i class="fa-solid fa-chevron-right"></i>
@@ -103,101 +95,201 @@
     <div class="blog-layout">
       <!-- MAIN CONTENT -->
       <main>
-        <div class="blog-grid-main">
-          <!-- FEATURED POST -->
-          <div class="featured-post fade-in">
-            <div class="featured-post-image">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span>Security Guide</span>
-            </div>
-            <div class="featured-post-body">
-              <div class="featured-label"><i class="fa-solid fa-fire" style="color: var(--gold); margin-right:4px;"></i> Featured Post</div>
-              <div class="blog-meta" style="margin-bottom: 8px;"><span><i class="fa-regular fa-calendar"></i> 10 Jun 2025</span><span><i class="fa-regular fa-clock"></i> 7 min read</span></div>
-              <h3>The Complete Home Security Guide for South African Homeowners in 2025</h3>
-              <p>From choosing the right cameras to picking an alarm that works during load-shedding — everything you need to know to protect your home this year.</p>
-              <a href="#" class="btn btn-navy btn-sm">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+
+        <!-- ARTICLE 1 -->
+        <article class="blog-article fade-in" id="cctv-placement">
+          <span class="blog-article-cat">CCTV</span>
+          <h2>5 Places You Must Install CCTV Cameras at Home</h2>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 10 Jun 2025</span></div>
+
+          <p>Your home has a handful of vulnerable spots that burglars check first. Covering these with cameras doesn't just capture footage — it actively deters break-ins. Here are the five positions every South African homeowner should prioritise.</p>
+
+          <h3>1. Front door and main entrance</h3>
+          <p>Over 30% of burglars enter through the front door. A visible camera here serves as both a deterrent and an identification tool. Position it at around 2.5 metres height, angled slightly downward so faces are captured clearly.</p>
+
+          <h3>2. Back door and kitchen entrance</h3>
+          <p>The second most common entry point. Many homeowners forget this one because it's not visible from the street. A camera here catches anyone approaching from the rear of the property — where most break-ins in South Africa actually happen.</p>
+
+          <h3>3. Garage and driveway</h3>
+          <p>If your car is outside or your garage is attached to the house, this is a priority. Cameras with night vision and motion detection are essential here — most vehicle and tool theft happens after dark.</p>
+
+          <h3>4. Side gates and passages</h3>
+          <p>The narrow passages between houses are blind spots that burglars use to move between the front and back of properties undetected. A camera with a wide-angle lens positioned at the passage entry covers this vulnerability.</p>
+
+          <h3>5. Garden perimeter and wall line</h3>
+          <p>For properties with boundary walls or fences, perimeter cameras catch movement before intruders reach the house. These are especially effective when paired with motion-triggered lighting.</p>
+
+          <h3>What to look for in cameras</h3>
+          <ul>
+            <li><strong>Night vision</strong> — infrared or colour night vision for after-dark coverage</li>
+            <li><strong>Weatherproof rating</strong> — IP65 or higher for South African conditions</li>
+            <li><strong>Remote access</strong> — smartphone app so you can check in from anywhere</li>
+            <li><strong>Battery backup</strong> — keeps recording during load shedding</li>
+          </ul>
+
+          <div class="blog-article-cta">
+            <p>Not sure where to start? <a href="contact.html">Contact EE Solutions</a> for a free site assessment — we'll map out exactly where cameras should go on your specific property.</p>
           </div>
+        </article>
 
-          <!-- BLOG CARDS -->
-          <article class="blog-card fade-in delay-1">
-            <div class="blog-image">
-              <div class="gallery-placeholder"><i class="fa-solid fa-video"></i><span>CCTV Tips</span></div>
-              <span class="blog-cat">CCTV</span>
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 3 Jun 2025</span><span><i class="fa-regular fa-clock"></i> 4 min</span></div>
-              <h4>5 Places You Must Install CCTV Cameras at Home</h4>
-              <p>Most break-ins happen at the same entry points. Strategic placement deters criminals before they strike.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </article>
+        <!-- ARTICLE 2 -->
+        <article class="blog-article fade-in" id="smart-alarms">
+          <span class="blog-article-cat">Alarms</span>
+          <h2>Why Smart Alarms Are Replacing Traditional Systems in SA</h2>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 3 Jun 2025</span></div>
 
-          <article class="blog-card fade-in delay-2">
-            <div class="blog-image">
-              <div class="gallery-placeholder"><i class="fa-solid fa-bell"></i><span>Alarm Systems</span></div>
-              <span class="blog-cat">Alarms</span>
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 28 May 2025</span><span><i class="fa-regular fa-clock"></i> 5 min</span></div>
-              <h4>Why Smart Alarms Are Replacing Traditional Systems in SA</h4>
-              <p>Remote control, false-alarm filters, and instant phone alerts — here's why the upgrade is worth it.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </article>
+          <p>The alarm systems South Africans grew up with — keypads by the front door, a siren on the roof, panic buttons on the bedside table — are still the backbone of home security. But smart alarm systems have added capabilities that traditional setups can't match.</p>
 
-          <article class="blog-card fade-in delay-1">
-            <div class="blog-image">
-              <div class="gallery-placeholder"><i class="fa-solid fa-house-lock"></i><span>Home Safety</span></div>
-              <span class="blog-cat">Safety Tips</span>
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 20 May 2025</span><span><i class="fa-regular fa-clock"></i> 3 min</span></div>
-              <h4>10 Simple Things That Make Your Home a Harder Target</h4>
-              <p>Criminals look for easy opportunities. These low-cost measures dramatically reduce your risk.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </article>
+          <h3>What's changed?</h3>
+          <p>Traditional alarms rely on a phone line or radio signal to reach a monitoring centre. Smart alarms add cellular (SIM) and WiFi connectivity, which means they work even when Telkom lines are down. They also connect directly to your smartphone, so you get instant push notifications instead of waiting for the control room to call you.</p>
 
-          <article class="blog-card fade-in delay-2">
-            <div class="blog-image">
-              <div class="gallery-placeholder"><i class="fa-solid fa-store"></i><span>Business Security</span></div>
-              <span class="blog-cat">Business</span>
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 12 May 2025</span><span><i class="fa-regular fa-clock"></i> 6 min</span></div>
-              <h4>How to Protect Your Retail Store from Shoplifting and Theft</h4>
-              <p>Retail crime costs South African businesses billions annually. Here's the security setup that works.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </article>
+          <h3>Key advantages of smart alarms</h3>
+          <ul>
+            <li><strong>Remote arming/disarming</strong> — forgot to arm the alarm when you left? Do it from your phone.</li>
+            <li><strong>Zone-by-zone control</strong> — arm the perimeter while keeping interior zones off, perfect for when you're home at night.</li>
+            <li><strong>False alarm filtering</strong> — smart sensors distinguish between pets, wind, and actual intrusion.</li>
+            <li><strong>Integration</strong> — connects to cameras, electric fencing, and access control from a single dashboard.</li>
+          </ul>
 
-          <article class="blog-card fade-in delay-1">
-            <div class="blog-image">
-              <div class="gallery-placeholder"><i class="fa-solid fa-bolt"></i><span>Load Shedding</span></div>
-              <span class="blog-cat">Load Shedding</span>
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 5 May 2025</span><span><i class="fa-regular fa-clock"></i> 4 min</span></div>
-              <h4>Does Load Shedding Leave Your Security System Vulnerable?</h4>
-              <p>The honest answer — and what to do to ensure your alarms and cameras keep working when the power goes out.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </article>
+          <h3>Are traditional alarms obsolete?</h3>
+          <p>No. A traditional alarm with armed response is still better than no alarm at all. But if you're installing a new system or upgrading, smart is the way to go — the monthly monitoring costs are similar, and the features are significantly better.</p>
 
-          <article class="blog-card fade-in delay-2">
-            <div class="blog-image">
-              <div class="gallery-placeholder"><i class="fa-solid fa-person-military-rifle"></i><span>Patrol Tips</span></div>
-              <span class="blog-cat">Patrol</span>
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 28 Apr 2025</span><span><i class="fa-regular fa-clock"></i> 5 min</span></div>
-              <h4>Do You Really Need Security Patrols? The Data Says Yes</h4>
-              <p>We analysed crime patterns across Cape Town estates and the results are clear — visible patrols work.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </article>
-        </div>
+          <h3>Load shedding compatibility</h3>
+          <p>Most smart alarm panels include a battery backup that keeps the system running during power outages. At EE Solutions, every system we install includes backup power as standard.</p>
+
+          <div class="blog-article-cta">
+            <p>Ready to upgrade? <a href="contact.html">Get a free quote</a> from EE Solutions — we'll assess your property and recommend the right alarm system for your needs.</p>
+          </div>
+        </article>
+
+        <!-- ARTICLE 3 -->
+        <article class="blog-article fade-in" id="harder-target">
+          <span class="blog-article-cat">Safety Tips</span>
+          <h2>10 Simple Things That Make Your Home a Harder Target</h2>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 28 May 2025</span></div>
+
+          <p>You don't need to spend thousands to improve your home security. Many of the most effective measures cost little or nothing — they just require a shift in habits.</p>
+
+          <ul>
+            <li><strong>Lock gates and doors — every time.</strong> Unlocked gates and doors are the most common way burglars enter properties in South Africa. It sounds obvious, but it's the number one vulnerability.</li>
+            <li><strong>Don't leave garage doors open.</strong> An open garage is an invitation. Even if you're just popping inside for a few minutes, close it.</li>
+            <li><strong>Trim overgrown bushes near windows.</strong> Dense vegetation provides cover for someone trying to break in. Keep bushes below window height.</li>
+            <li><strong>Install motion-sensor lights.</strong> A sudden burst of light is one of the most effective deterrents. Solar-powered options cost under R300 and require no wiring.</li>
+            <li><strong>Don't advertise on social media that you're away.</strong> Post your holiday photos when you get home, not while you're gone.</li>
+            <li><strong>Vary your routine.</strong> If you leave and arrive at the same times every day, criminals notice. Small changes in your schedule make you less predictable.</li>
+            <li><strong>Keep valuables out of sight.</strong> Don't leave laptops, phones, or bags visible through windows or in parked cars.</li>
+            <li><strong>Know your neighbours.</strong> Neighbourhood watch isn't old-fashioned — it's one of the most effective community security tools in South Africa.</li>
+            <li><strong>Get a dog.</strong> Any dog that barks at strangers is a deterrent. Size doesn't matter as much as noise.</li>
+            <li><strong>Display security signage.</strong> Visible signs and stickers from a security company make criminals think twice — even before you have a full system installed.</li>
+          </ul>
+
+          <p>The best security is layered — combine these habits with cameras, an alarm system, and armed response for proper protection.</p>
+
+          <div class="blog-article-cta">
+            <p>Want to take the next step? <a href="contact.html">Contact EE Solutions</a> for a free property assessment. We'll identify your specific risks and recommend a solution that fits your budget.</p>
+          </div>
+        </article>
+
+        <!-- ARTICLE 4 -->
+        <article class="blog-article fade-in" id="retail-security">
+          <span class="blog-article-cat">Business</span>
+          <h2>How to Protect Your Retail Store from Shoplifting and Theft</h2>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 12 May 2025</span></div>
+
+          <p>Retail crime costs South African businesses billions of rands annually. If you run a shop, warehouse, or any business with stock, you need a security plan. Here's what works.</p>
+
+          <h3>CCTV coverage is non-negotiable</h3>
+          <p>Cameras should cover every aisle, the till area, all entry and exit points, and the storeroom. Visible cameras deter casual shoplifters. Hidden cameras catch organised theft rings and internal shrinkage.</p>
+
+          <h3>Access control for the storeroom</h3>
+          <p>Most internal theft happens when employees or unauthorised persons access the storeroom without oversight. Electronic access control with audit logs tells you exactly who went in and when.</p>
+
+          <h3>Alarm system with after-hours monitoring</h3>
+          <p>Break-ins typically happen overnight or over weekends. A monitored alarm system with armed response means criminals have minutes — not hours — before someone arrives on scene.</p>
+
+          <h3>Staff training</h3>
+          <p>Your staff are your first line of defence. Train them to recognise suspicious behaviour, how to handle a situation safely, and when to call for help rather than confront someone directly.</p>
+
+          <h3>Security patrol for shopping centres</h3>
+          <p>If your store is in a mall or business park, security patrol adds an additional layer. Regular, visible patrols deter smash-and-grab incidents and keep the area safer for both staff and customers.</p>
+
+          <div class="blog-article-cta">
+            <p>Need business security? <a href="contact.html">Get a free assessment</a> from EE Solutions — we work with retail stores, offices, and warehouses across South Africa.</p>
+          </div>
+        </article>
+
+        <!-- ARTICLE 5 -->
+        <article class="blog-article fade-in" id="load-shedding">
+          <span class="blog-article-cat">Load Shedding</span>
+          <h2>Does Load Shedding Leave Your Security System Vulnerable?</h2>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 5 May 2025</span></div>
+
+          <p>The honest answer: it can, if your system isn't set up properly. When the power goes off, a basic alarm or CCTV system with no battery backup goes offline — no cameras recording, no alarm sensors active, no connection to the monitoring centre. Criminals know this, and break-in rates spike during scheduled outages.</p>
+
+          <h3>Battery backup (UPS)</h3>
+          <p>Every alarm panel should have a battery backup that keeps the system running for at least 4 to 8 hours. At EE Solutions, we install backup batteries as standard with every alarm system.</p>
+
+          <h3>CCTV with battery or solar backup</h3>
+          <p>Cameras connected to a UPS or dedicated battery pack continue recording even when Eskom is off. For properties in areas with frequent outages, solar-powered camera solutions are also available.</p>
+
+          <h3>Cellular communication</h3>
+          <p>Older alarm systems that rely on Telkom landlines lose their link to the control room during outages if the phone exchange loses power. Modern systems use cellular (SIM card) connectivity, which operates independently of the electricity grid.</p>
+
+          <h3>Electric fencing</h3>
+          <p>Electric fencing energisers should be connected to a battery backup. Most quality energisers have built-in batteries, but they degrade over time — it's worth checking that yours is still holding charge.</p>
+
+          <h3>What you should do</h3>
+          <ul>
+            <li>Ask your security provider to test your backup batteries — they degrade over time and may need replacing.</li>
+            <li>Upgrade to cellular communication if you're still on a landline connection.</li>
+            <li>Consider a dedicated security UPS that covers your alarm panel, router, and at least two cameras.</li>
+          </ul>
+
+          <div class="blog-article-cta">
+            <p>Not sure if your system is load-shedding-proof? <a href="contact.html">Contact EE Solutions</a> — we'll check your setup and recommend any upgrades needed.</p>
+          </div>
+        </article>
+
+        <!-- ARTICLE 6 -->
+        <article class="blog-article fade-in" id="security-patrols">
+          <span class="blog-article-cat">Patrol</span>
+          <h2>Do You Really Need Security Patrols?</h2>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> 28 Apr 2025</span></div>
+
+          <p>If you live in a housing estate, manage a business park, or run a commercial property, security patrols are worth considering. Here's why they work.</p>
+
+          <h3>Visible deterrence</h3>
+          <p>The presence of uniformed security personnel reduces crime. Burglars, vandals, and opportunistic criminals avoid areas where they might be seen and intercepted. A patrol car or officer on foot changes the risk calculation for anyone planning a break-in.</p>
+
+          <h3>Patrols catch what cameras miss</h3>
+          <p>CCTV is excellent for monitoring and evidence, but cameras have blind spots and can't physically respond. A patrol officer on the ground spots suspicious activity — a car circling the block, someone loitering near a wall, a gate left unlocked — and acts on it immediately.</p>
+
+          <h3>Response time drops</h3>
+          <p>When patrol officers are already in the area, response to an alarm activation or emergency call is measured in minutes, not in the time it takes to dispatch someone from across town.</p>
+
+          <h3>When do you need patrols?</h3>
+          <ul>
+            <li><strong>Residential estates and complexes</strong> — regular perimeter and internal patrols keep residents safe and property values stable.</li>
+            <li><strong>Business parks and office buildings</strong> — after-hours patrols prevent break-ins and vandalism.</li>
+            <li><strong>Retail centres</strong> — visible security reduces shoplifting and makes customers feel safe.</li>
+            <li><strong>Events</strong> — temporary event security manages crowds, controls access, and handles incidents.</li>
+          </ul>
+
+          <h3>What good patrol looks like</h3>
+          <ul>
+            <li>Officers are PSIRA-registered and vetted</li>
+            <li>Patrol routes are varied and not predictable</li>
+            <li>GPS tracking confirms patrols are actually happening</li>
+            <li>Incident reports are provided regularly</li>
+          </ul>
+
+          <p>At EE Solutions, every patrol officer is trained, uniformed, and GPS-tracked. We provide regular patrol reports so you know exactly what's happening on your property.</p>
+
+          <div class="blog-article-cta">
+            <p>Interested in patrol services? <a href="contact.html">Get a free quote</a> — we cover residential estates, business parks, and events across South Africa.</p>
+          </div>
+        </article>
+
       </main>
 
       <!-- SIDEBAR -->
@@ -215,39 +307,12 @@
         <!-- Categories -->
         <div class="sidebar-card">
           <h4>Categories</h4>
-          <div class="sidebar-cat">CCTV <span class="cat-count">8</span></div>
-          <div class="sidebar-cat">Alarm Systems <span class="cat-count">6</span></div>
-          <div class="sidebar-cat">Safety Tips <span class="cat-count">12</span></div>
-          <div class="sidebar-cat">Business Security <span class="cat-count">5</span></div>
-          <div class="sidebar-cat">Load Shedding <span class="cat-count">3</span></div>
-          <div class="sidebar-cat">Security Patrol <span class="cat-count">4</span></div>
-          <div class="sidebar-cat">News &amp; Updates <span class="cat-count">7</span></div>
-        </div>
-
-        <!-- Recent Posts -->
-        <div class="sidebar-card">
-          <h4>Recent Posts</h4>
-          <div class="recent-post">
-            <div class="recent-post-thumb"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="recent-post-info">
-              <h6>Complete Home Security Guide 2025</h6>
-              <span><i class="fa-regular fa-calendar"></i> 10 Jun 2025</span>
-            </div>
-          </div>
-          <div class="recent-post">
-            <div class="recent-post-thumb"><i class="fa-solid fa-video"></i></div>
-            <div class="recent-post-info">
-              <h6>5 Places to Install CCTV at Home</h6>
-              <span><i class="fa-regular fa-calendar"></i> 3 Jun 2025</span>
-            </div>
-          </div>
-          <div class="recent-post">
-            <div class="recent-post-thumb"><i class="fa-solid fa-bell"></i></div>
-            <div class="recent-post-info">
-              <h6>Smart Alarms vs Traditional Systems</h6>
-              <span><i class="fa-regular fa-calendar"></i> 28 May 2025</span>
-            </div>
-          </div>
+          <div class="sidebar-cat"><a href="#cctv-placement" style="color:inherit;">CCTV</a></div>
+          <div class="sidebar-cat"><a href="#smart-alarms" style="color:inherit;">Alarm Systems</a></div>
+          <div class="sidebar-cat"><a href="#harder-target" style="color:inherit;">Safety Tips</a></div>
+          <div class="sidebar-cat"><a href="#retail-security" style="color:inherit;">Business Security</a></div>
+          <div class="sidebar-cat"><a href="#load-shedding" style="color:inherit;">Load Shedding</a></div>
+          <div class="sidebar-cat"><a href="#security-patrols" style="color:inherit;">Security Patrol</a></div>
         </div>
 
         <!-- Quick Contact -->
@@ -284,7 +349,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <svg viewBox="0 0 44 44" fill="none" width="34" height="34"><circle cx="22" cy="22" r="21" fill="#0d2251" stroke="#f5a623" stroke-width="1.5"/><circle cx="22" cy="22" r="17.5" fill="none" stroke="#f5a623" stroke-width="0.7"/><path d="M10.5 13h3v18h-3zM13.5 13h11v2.8h-11zM13.5 20.6h9v2.8h-9zM13.5 28.2h11v2.8h-11z" fill="#f5a623"/><path d="M30.5 13h3v18h-3zM19.5 13h11v2.8h-11zM21.5 20.6h9v2.8h-9zM19.5 28.2h11v2.8h-11z" fill="#f5a623"/><circle cx="8" cy="22" r="0.9" fill="#f5a623"/><circle cx="36" cy="22" r="0.9" fill="#f5a623"/></svg>
+          <img src="images/logo.png" alt="EE Surveillance" width="34" height="34">
           <div class="logo-text"><span class="logo-name">EE <span>Solutions</span></span><span class="logo-tagline">Protect What Matters</span></div>
         </a>
         <p>South Africa's trusted security partner — 24/7 CCTV, alarms, and patrol.</p>
