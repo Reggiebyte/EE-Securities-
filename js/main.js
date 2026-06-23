@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {
             const resp = document.createElement('div');
             resp.className = 'chat-message';
-            resp.textContent = 'Thanks! A member of our team will contact you within the hour. For emergencies call +44 7471 642878.';
+            resp.textContent = 'Thanks! A member of our team will contact you within the hour. For emergencies call +27 78 404 4442.';
             msgArea.appendChild(resp);
             msgArea.scrollTop = msgArea.scrollHeight;
           }, 900);
