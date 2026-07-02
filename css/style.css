@@ -1681,6 +1681,205 @@ footer {
 
 .footer-bottom-links a:hover { color: var(--gold); }
 
+/* ============================================================
+   NEGATIVE FOOTER (oversized wordmark + white panel)
+   ============================================================ */
+.footer-negative {
+  background: transparent;
+  padding: 70px 0 40px;
+}
+
+.footer-neg-card {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(13, 34, 81, 0.18);
+  background: #fff;
+}
+
+.footer-neg-block {
+  position: relative;
+  height: clamp(180px, 24vw, 300px);
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.footer-wordmark {
+  position: absolute;
+  left: 50%;
+  bottom: -0.3em;
+  transform: translateX(-50%);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(240px, 44vw, 600px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #fff;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+
+.footer-neg-panel {
+  background: #fff;
+  padding: 54px 54px 28px;
+}
+
+.footer-neg-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.1fr auto;
+  gap: 44px;
+  align-items: start;
+}
+
+.footer-neg-intro h3 {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.footer-neg-intro > p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 12px 0 22px;
+}
+
+.footer-neg-news-label {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.footer-neg-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d7dde8;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 320px;
+  margin-bottom: 22px;
+  transition: var(--transition);
+}
+
+.footer-neg-form:focus-within { border-color: var(--gold); }
+
+.footer-neg-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  color: var(--navy);
+  background: transparent;
+}
+
+.footer-neg-form input::placeholder { color: #9aa5b5; }
+
+.footer-neg-form button {
+  border: none;
+  background: var(--navy);
+  color: #fff;
+  padding: 0 16px;
+  align-self: stretch;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.footer-neg-form button:hover { background: var(--gold); color: var(--navy); }
+
+.footer-neg-intro .social-links .social-link {
+  background: #f1f4f9;
+  border-color: #e2e8f2;
+  color: #64748b;
+}
+
+.footer-neg-intro .social-links .social-link:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+.footer-neg-col h5 {
+  color: var(--navy);
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.footer-neg-col ul li { margin-bottom: 11px; }
+
+.footer-neg-col ul li a,
+.footer-neg-col ul li span {
+  color: #64748b;
+  font-size: 0.86rem;
+  transition: var(--transition);
+}
+
+.footer-neg-col ul li a:hover { color: var(--gold); }
+
+.footer-neg-badge {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-neg-badge img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-neg-bottom {
+  border-top: 1px solid #e8edf4;
+  margin-top: 40px;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-neg-bottom p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.footer-neg-bottom .footer-bottom-links a {
+  color: #94a3b8;
+}
+
+.footer-neg-bottom .footer-bottom-links a:hover { color: var(--gold); }
+
+@media (max-width: 860px) {
+  .footer-neg-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .footer-neg-intro { grid-column: 1 / -1; }
+  .footer-neg-badge {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+  .footer-neg-panel { padding: 40px 28px 24px; }
+}
+
+@media (max-width: 520px) {
+  .footer-neg-grid { grid-template-columns: 1fr; }
+  .footer-neg-card { border-radius: 20px; }
+}
+
 /* Emergency banner above footer */
 .emergency-banner {
   background: var(--gold);
